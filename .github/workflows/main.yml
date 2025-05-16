@@ -16,11 +16,11 @@ jobs:
       - name: Checkout du code
         uses: actions/checkout@v3
 
-      - name: Installer les dépendances
-        run: npm install
+      # - name: Installer les dépendances
+      #   run: npm install
 
-      - name: Build du site
-        run: npm run build
+      # - name: Build du site
+      #   run: npm run build
 
       - name: Déployer sur GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
