@@ -18,6 +18,3 @@ jobs:
   deploy:
     needs: tests
     uses: ./.github/workflows/deploy.yml
-  
-  build:
-    needs: deploy
