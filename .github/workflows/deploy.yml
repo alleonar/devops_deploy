@@ -1,11 +1,7 @@
 name: Deploy
 
 on:
-  push:
-    branches: [main]
-
-permissions:
-  contents: write
+  workflow_call:
 
 jobs:
   deploy:
