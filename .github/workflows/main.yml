@@ -17,4 +17,5 @@ jobs:
 
   deploy:
     needs: tests
+    if: success()
     uses: ./.github/workflows/deploy.yml
