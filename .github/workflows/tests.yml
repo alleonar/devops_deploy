@@ -9,10 +9,8 @@ name: Tests
 on:
   workflow_call:
 
-
 jobs:
   test:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
