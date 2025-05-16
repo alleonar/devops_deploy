@@ -1,19 +1,19 @@
-name: Deploy
+# name: Deploy
 
-on:
-  push:
-    branches: [main, mytestarea]
+# on:
+#   push:
+#     branches: [main, mytestarea]
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Deploy web/ to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./web
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Deploy web/ to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./web
