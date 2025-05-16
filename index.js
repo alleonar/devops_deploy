@@ -1,3 +1,6 @@
+/** 
+ * Creates the todo list in the DOM
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const todoForm = document.getElementById('todo-form');
     const todoInput = document.getElementById('todo-input');
@@ -33,10 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        const span = document.createElement('span');
-        span.textContent = todo.text;
+        const input = document.createElement('input');
+        input.className = "bg-gray-50 focus:bg-white";
+        input.value = todo.text;
         if (todo.completed) {
-            span.classList.add('line-through', 'text-gray-500');
+            input.classList.add('line-through', 'text-gray-500');
         }
 
         const deleteButton = document.createElement('button');
@@ -49,9 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         div.appendChild(checkbox);
-        div.appendChild(span);
+        div.appendChild(input);
         li.appendChild(div);
         li.appendChild(deleteButton);
+        
         
         return li;
     };
