@@ -4,7 +4,7 @@
   "description": "Application de liste de tâches",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run build && node server.js",
     "test": "jest"
   },
   "devDependencies": {
