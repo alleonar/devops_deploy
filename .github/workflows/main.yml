@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: ["main"]
 
+permissions:
+  contents: write # Autoriser l'écriture dans le repository
+  issues: write # Si vous devez modifier des issues
+  pull-requests: write # Si vous avez besoin de manipuler des pull requests
+
 jobs:
   test:
     uses: ./.github/workflows/tests.yml

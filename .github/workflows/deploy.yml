@@ -3,9 +3,6 @@ name: Deploy
 on:
   workflow_call:
 
-permissions:
-  actions: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
