@@ -15,6 +15,23 @@ on:
 #           publish_dir: ./web
 
 jobs:
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
+
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: "18"
+
+  #     - name: Install dependencies
+  #       run: npm ci
+
+  #     - name: Run Jest tests
+  #       run: npm test
+
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -32,7 +49,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out'
+          path: "./dist"
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -7,9 +7,8 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: write # Autoriser l'écriture dans le repository
-  issues: write # Si vous devez modifier des issues
-  pull-requests: write # Si vous avez besoin de manipuler des pull requests
+  pages: write
+  id-token: write
 
 jobs:
   tests:

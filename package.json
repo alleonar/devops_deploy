@@ -4,7 +4,7 @@
   "description": "Application de liste de tâches",
   "main": "server.js",
   "scripts": {
-    "build": "npm run build",
+    "build": "vite build",
     "start": "node server.js",
     "test": "jest"
   },
