@@ -1,21 +1,16 @@
-name: CI
+name: Tests
+
+# on:
+#   push:
+#     branches: ["main"]
+#   pull_request:
+#     branches: ["main"]
 
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+  workflow_call:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
   test:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
