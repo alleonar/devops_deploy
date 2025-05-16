@@ -12,9 +12,12 @@ permissions:
   pull-requests: write # Si vous avez besoin de manipuler des pull requests
 
 jobs:
-  test:
+  tests:
     uses: ./.github/workflows/tests.yml
 
   deploy:
-    needs: test
+    needs: tests
     uses: ./.github/workflows/deploy.yml
+  
+  build:
+    needs: deploy
