@@ -1,9 +1,12 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -13,5 +16,14 @@ jobs:
       - name: Checkout du code
         uses: actions/checkout@v3
 
-      - name: Étape de déploiement
-        run: echo "Déploiement terminé ✅"
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Build du site
+        run: npm run build
+
+      - name: Déployer sur GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
