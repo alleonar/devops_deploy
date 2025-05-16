@@ -4,8 +4,7 @@
   "description": "Application de liste de tâches",
   "main": "server.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "build": "npm run build",
     "start": "node server.js",
     "test": "jest"
   },
