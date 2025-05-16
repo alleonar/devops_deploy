@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Liste de Tâches</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Ma Liste de Tâches</h1>
+        
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+            <form id="todo-form" class="mb-4">
+                <div class="flex gap-2">
+                    <input 
+                        type="text" 
+                        id="todo-input" 
+                        class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+                        placeholder="Ajouter une nouvelle tâche..."
+                    >
+                    <button 
+                        type="submit"
+                        class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    >
+                        Ajouter
+                    </button>
+                </div>
+            </form>
+
+            <ul id="todo-list" class="space-y-2">
+                <!-- Les tâches seront ajoutées ici dynamiquement -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
