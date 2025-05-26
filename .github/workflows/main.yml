@@ -1,0 +1,20 @@
+name: CI/CD
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
+
+  deploy:
+    needs: tests
+    if: success()
+    uses: ./.github/workflows/deploy.yml
